@@ -1,64 +1,83 @@
+/* styles.css */
+
+/* Global Styles */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
 }
 
 header {
-    background-color: #1f1f1f;
-    text-align: center;
+    background-color: #c20000; /* Red for urgency */
     padding: 20px;
+    text-align: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #e74c3c;
+h1 {
     margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff; /* White links */
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: #e74c3c;
+    text-decoration: underline; /* Underline on hover */
 }
 
-section {
-    padding: 30px;
-    margin: 20px;
-    background-color: #1a1a1a;
-    border-radius: 10px;
+main {
+    padding: 20px;
 }
 
-section h2 {
-    color: #e74c3c;
-    border-bottom: 2px solid #e74c3c;
-    padding-bottom: 5px;
+h2 {
+    color: #c20000; /* Red for section headers */
+    border-bottom: 2px solid #c20000; /* Red underline for headings */
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #e74c3c;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+p, li {
+    line-height: 1.6; /* Increase line height for readability */
 }
 
-.button:hover {
-    background-color: #c0392b;
+blockquote {
+    font-style: italic;
+    margin: 15px 0;
+    border-left: 4px solid #c20000; /* Red left border for blockquotes */
+    padding-left: 15px;
 }
 
 footer {
+    background-color: #222222; /* Darker footer */
+    color: #cccccc; /* Light grey text for footer */
     text-align: center;
-    padding: 15px;
-    background-color: #1f1f1f;
-    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack links on small screens */
+        margin: 5px 0;
+    }
+    
+    h1 {
+        font-size: 2em; /* Adjust heading size for mobile */
+    }
 }
